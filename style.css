@@ -31,15 +31,15 @@ p {
 /* Bingo Card Grid */
 #bingo-card {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
+    grid-template-columns: repeat(5, 120px);
     grid-gap: 5px;
     margin: 20px 0;
 }
 
 .bingo-cell {
     /* Existing styles */
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
