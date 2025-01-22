@@ -31,21 +31,10 @@ p {
 /* Bingo Card Grid */
 #bingo-card {
     display: grid;
-    grid-template-columns: repeat(5, 100px); /* Default 5x5 grid with 100px per cell */
+    grid-template-columns: repeat(5, 100px);
     grid-gap: 5px;
     margin: 20px 0;
-    justify-content: center; /* Centers the grid */
-}
-
-/* Responsive Layout for Mobile (below 600px) */
-@media (max-width: 600px) {
-    #bingo-card {
-        grid-template-columns: repeat(5, 18vw); /* Adjusts cell width to be relative to viewport */
-        grid-template-rows: repeat(5, 18vw); /* Adjusts row height */
-    }
-    .bingo-cell {
-        font-size: clamp(0.8rem, 2vw, 1.2rem); /* Makes font size smaller on mobile */
-    }
+    justify-content: center;
 }
 
 /* Bingo Cells */
@@ -61,21 +50,15 @@ p {
     color: #000000;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-size: clamp(0.8rem, 3vw, 1.5rem); /* Responsive font size */
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
     text-align: center;
-    word-wrap: break-word; /* Wrap text */
-    overflow: hidden; /* Prevents overflow */
+    word-wrap: break-word;
+    overflow: hidden;
     padding: 5px;
     box-sizing: border-box;
 }
 
 .bingo-cell.clicked {
-    background-color: #273746;  /* Secondary color */
-    color: #FFFFFF;             /* White text */
-}
-
-/* Free Space Styling */
-.free-space {
     background-color: #273746;
     color: #FFFFFF;
 }
