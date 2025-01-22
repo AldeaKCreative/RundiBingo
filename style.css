@@ -29,7 +29,6 @@ p {
 }
 
 /* Bingo Card Grid */
-/* Bingo Card Grid */
 #bingo-card {
     display: grid;
     grid-template-columns: repeat(5, 100px); /* Default 5x5 grid with 100px per cell */
@@ -62,25 +61,17 @@ p {
     color: #000000;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Responsive font size */
+    font-size: clamp(0.8rem, 3vw, 1.5rem); /* Responsive font size */
     text-align: center;
     word-wrap: break-word; /* Wrap text */
     overflow: hidden; /* Prevents overflow */
     padding: 5px;
     box-sizing: border-box;
 }
-    /* New styles for text fitting */
-    font-size: calc(8px + 1vw); /* Responsive font size */
-    text-align: center;
-    word-wrap: break-word;      /* Allows text to break within box */
-    overflow: hidden;           /* Hides overflow text if needed */
-    padding: 5px;               /* Adds some spacing for better readability */
-    box-sizing: border-box;     /* Includes padding within the box dimensions */
-}
 
 .bingo-cell.clicked {
-    background-color: #273746;
-    color: #FFFFFF;
+    background-color: #273746;  /* Secondary color */
+    color: #FFFFFF;             /* White text */
 }
 
 /* Free Space Styling */
