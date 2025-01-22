@@ -32,8 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.textContent = shuffledItems.pop();
       }
 
+      // Event listener for toggling colors
       cell.addEventListener('click', () => {
+        // Avoid toggling for free space
         if (!cell.classList.contains('free-space')) {
+          // Toggle the 'clicked' class to change colors when clicked
           cell.classList.toggle('clicked');
         }
       });
