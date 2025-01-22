@@ -1,0 +1,95 @@
+/* General Styling */
+body {
+    background-color: #85C1E9;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Bingo Card Container */
+.bingo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Bingo Card Grid */
+#bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 5px;
+    margin: 20px 0;
+}
+
+.bingo-cell {
+    /* Existing styles */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    /* New styles for text fitting */
+    font-size: calc(8px + 1vw); /* Responsive font size */
+    text-align: center;
+    word-wrap: break-word;      /* Allows text to break within box */
+    overflow: hidden;           /* Hides overflow text if needed */
+    padding: 5px;               /* Adds some spacing for better readability */
+    box-sizing: border-box;     /* Includes padding within the box dimensions */
+}
+
+.bingo-cell.clicked {
+    background-color: #273746;
+    color: #FFFFFF;
+}
+
+/* Free Space Styling */
+.free-space {
+    background-color: #273746;
+    color: #FFFFFF;
+}
+
+/* Shuffle Button */
+#shuffle-button {
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#shuffle-button:hover {
+    background-color: #2ECC71;
+    color: #FFFFFF;
+}
+
+#shuffle-button:active {
+    background-color: #273746;
+    color: #FFFFFF;
+}
