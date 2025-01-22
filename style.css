@@ -29,17 +29,30 @@ p {
 }
 
 /* Bingo Card Grid */
+/* Bingo Card Grid */
 #bingo-card {
     display: grid;
-    grid-template-columns: repeat(5, 120px);
+    grid-template-columns: repeat(5, 100px); /* Default 5x5 grid with 100px per cell */
     grid-gap: 5px;
     margin: 20px 0;
+    justify-content: center; /* Centers the grid */
 }
 
+/* Responsive Layout for Mobile (below 600px) */
+@media (max-width: 600px) {
+    #bingo-card {
+        grid-template-columns: repeat(5, 18vw); /* Adjusts cell width to be relative to viewport */
+        grid-template-rows: repeat(5, 18vw); /* Adjusts row height */
+    }
+    .bingo-cell {
+        font-size: clamp(0.8rem, 2vw, 1.2rem); /* Makes font size smaller on mobile */
+    }
+}
+
+/* Bingo Cells */
 .bingo-cell {
-    /* Existing styles */
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +62,13 @@ p {
     color: #000000;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-
+    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Responsive font size */
+    text-align: center;
+    word-wrap: break-word; /* Wrap text */
+    overflow: hidden; /* Prevents overflow */
+    padding: 5px;
+    box-sizing: border-box;
+}
     /* New styles for text fitting */
     font-size: calc(8px + 1vw); /* Responsive font size */
     text-align: center;
